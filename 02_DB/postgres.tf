@@ -89,5 +89,5 @@ module "postgresql_security_group" {
   ingress_cidr_blocks = ["31.14.251.238/32"]
   ingress_with_source_security_group_id= [{from_port=5432, to_port=5432, protocol    = "tcp",
     description="PostgreSQL from kube nodes",
-    source_security_group_id = "sg-0e66218d97da58c37"}]
+    source_security_group_id = "sg-0d45058c170d602ea"}]
 }
