@@ -51,11 +51,6 @@ I implemented the following:
     - to get details of a specific airline: http://afe30604-simpleflask1-simp-a5f3-1053053844.eu-west-2.elb.amazonaws.com/api/v1/airlines/23
     - to trigger the recreation of the database: `curl -vvvX  POST curl -X POST http://afe30604-simpleflask1-simp-a5f3-1053053844.eu-west-2.elb.amazonaws.com/api/v1/load/airlines`
   
-## What I did _not_ implement
-
-- I did not create a front-end application: although I am studying https://pragprog.com/book/dswdcloj3/web-development-with-clojure-third-edition, frontend dev has never been my best skill
-- There is no code verification in place: I just added a place-holder in the pipeline where tests should be written, plus other steps (pep8 verification of python code, SonarQube analisys, ...)
-
 ## What could be done now
 
 This is just a prototype like project. Many parts of this project are therefore simplified in a way which would not be acceptable in a real-world production project.
@@ -74,3 +69,5 @@ Some examples are:
   - The peering between the Kubernetes VPC and the RDS VPC has been create dmanually
 - No TLS certificates have been configured, so everything is served via http and not https
 - The changes required to configure AWS to support ALB Ingress controllers have been applied manually (https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html)
+- the database schema has been initialized manually
+
