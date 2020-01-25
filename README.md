@@ -2,9 +2,27 @@
 
 Just a prototype for an infrastructure setup targeting Kubernetes deployments.
 
-## Architecture
+## Architecture: very high level overview
+
+### Infrastructure
+
+The infrastructure for this prototype consists in the following elements:
+
+- En EKS cluster with 3 nodes, one per availability zone, where services and applications should be deployed
+- An RDS instance, in a dedicated VPC
+- A Peering connection between the two VPCs to allow communication
 
 ![infrastructure](infrastructure.jpg "infrastructure")
+
+### Prototype: what applications will be deployed
+
+The Kubernetes cluster will host the following applications:
+
+- a Jenkins instance, which will be used to build an example application, and to deploy it to the kubernetes cluster itself
+- A simple api, written in python using the Flask framework, which offers the following capabilities:
+  - load from an external datafile information related to airlines; this will be stored in a Postgre DB
+  - list the airlines available in the database
+  - display information for a specific airline
 
 ![applications](applications.jpg "applications")
 
