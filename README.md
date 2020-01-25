@@ -6,7 +6,7 @@ Just a prototype for an infrastructure setup targeting Kubernetes deployments.
 
 ### Infrastructure
 
-The infrastructure for this prototype consists in the following elements:
+The infrastructure for this prototype consists of the following elements:
 
 - En EKS cluster with 3 nodes, one per availability zone, where services and applications should be deployed
 - An RDS instance, in a dedicated VPC
